@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+.chroma/
+data/*
+!data/sample/
+data/sample/*
+!data/sample/01-bottleneck-throughput.md
+!data/sample/02-release-and-buffer.md
+!data/sample/03-local-utilization.md
