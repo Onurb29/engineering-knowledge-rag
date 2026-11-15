@@ -1,6 +1,6 @@
 # Engineering Knowledge RAG
 
-The first lab uses the bottleneck idea from *The Goal* to ask whether faster cutting increases output when assembly is already at capacity. The three Markdown notes describe a fictional line and measure physical output in finished units per hour.
+The first lab uses the bottleneck idea from the book *The Goal* to ask whether faster cutting increases output when assembly is already at capacity. The three Markdown notes describe a fictional line and measure physical output in finished units per hour.
 
 The notebook shows six sections you can inspect separately. Partition the notes, chunk by heading, embed and index the chunks, retrieve evidence with a source filter when needed, and optionally generate an answer with citations.
 
