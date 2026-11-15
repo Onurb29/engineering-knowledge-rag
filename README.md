@@ -1,8 +1,10 @@
 # Engineering Knowledge RAG
 
-The first lab uses the bottleneck idea from the book *The Goal* to ask whether faster cutting increases output when assembly is already at capacity. The three Markdown notes describe a fictional line and measure physical output in finished units per hour.
+This project is my practice space for building retrieval-augmented generation (RAG) pipelines with Markdown notes. I split the notes into passages, create embeddings, and index them in Chroma, a vector database. The pipeline retrieves passages relevant to a question and can pass them to a language model to generate an answer with source citations.
 
-The notebook shows six sections you can inspect separately. Partition the notes, chunk by heading, embed and index the chunks, retrieve evidence with a source filter when needed, and optionally generate an answer with citations.
+The first lab uses the bottleneck idea from the book *The Goal* to ask whether faster cutting increases output when assembly is already at capacity. Three original Markdown notes describe a fictional production line, with output measured in finished units per hour.
+
+The notebook walks through six stages: partition the notes, chunk by heading, embed and index the chunks, retrieve relevant passages, narrow the search with a source filter, and optionally generate an answer using Ollama. Each stage can be inspected separately to see how the notes become evidence for an answer. The Chroma collection is held in memory for the current kernel session.
 
 ## What I learned
 
