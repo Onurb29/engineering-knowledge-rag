@@ -4,6 +4,16 @@ The first lab uses the bottleneck idea from *The Goal* to ask whether faster cut
 
 The notebook shows six sections you can inspect separately. Partition the notes, chunk by heading, embed and index the chunks, retrieve evidence with a source filter when needed, and optionally generate an answer with citations.
 
+## What I learned
+
+- **Partitioning and chunking serve different purposes.** Partitioning identifies elements such as headings and paragraphs. Chunking groups those elements into passages for retrieval. Keeping the source filename and heading with each chunk makes the retrieved text easier to trace back to the notes.
+- **Embeddings make similarity search possible.** Chroma embeds both the stored passages and the question. Inspecting the stored text, metadata, and vectors helped me connect the original notes to what the collection actually contains. A smaller cosine distance indicates a closer vector match; I still need to read the passage to decide whether it answers the question.
+- **Source filters change the search scope.** Comparing the full-corpus search with a search restricted to the bottleneck note shows two separate decisions: metadata filtering selects eligible chunks, and vector similarity ranks them.
+- **Retrieval and answer generation need separate checks.** I can inspect the retrieved evidence before calling Ollama. That helps distinguish missing evidence from a model that misinterprets evidence it received. In this example, faster Cutting still leaves Assembly limiting output to 40 finished units per hour.
+- **A citation does not guarantee a supported answer.** During testing, the model refused despite relevant passages and also produced an incorrect conclusion with a citation. Asking for before/after values and allowing direct conclusions helped in one observed run, but I still need to verify each claim against its cited passage.
+
+This lab gives me a small, inspectable starting point. I have not yet established reliability across a larger corpus or a repeatable set of evaluation questions.
+
 ## Run in VS Code
 
 Use Python 3.12 and the VS Code Python and Jupyter extensions. From the repository root, run the following.
